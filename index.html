@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Createathon Studio - Empowering Creators Through Competition</title>
+    <meta name="description"
+        content="Join the global creator community. Compete, create, and win at the world's premier createathon studio. Where creativity meets competition.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Three.js for 3D Models -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">CREATEATHON</span>
+                <span class="logo-subtitle">STUDIO</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#competitions" class="nav-link">Competitions</a></li>
+                <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li><a href="#global" class="nav-link">Global</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Join Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">We are creators</span>
+            </h1>
+            <h2 class="hero-subtitle">Your freedom to innovate and compete</h2>
+            <p class="hero-description">Every competition is designed around your creativity, passion, and ambitions —
+                so you can focus on what truly matters, while we create the perfect stage for your talent.</p>
+            <a href="#about" class="scroll-indicator">
+                <span>Scroll down</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 4V16M10 16L4 10M10 16L16 10" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">We are creators</h2>
+                <p class="section-lead">Createathon Studio® is a global platform with over 500+ competitions hosted
+                    across 80+ countries. From emerging artists to industry professionals, our creators trust us to
+                    deliver world-class events, every time.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L25 15L35 16.5L27.5 24L29.5 35L20 29.5L10.5 35L12.5 24L5 16.5L15 15L20 5Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Elite Competitions</h3>
+                    <p class="feature-description">Compete in world-class createathons designed for creators who demand
+                        excellence. From 24-hour sprints to month-long challenges, every event pushes boundaries.</p>
+                </div>
+
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M20 12V20L26 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Your Creative Freedom</h3>
+                    <p class="feature-description">We value your time and creativity above all. Createathon Studio gives
+                        you the freedom to create, innovate, and compete on your terms — without compromise.</p>
+                </div>
+
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M5 20L15 10L25 20L35 10" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5 30L15 20L25 30L35 20" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Excellence in Execution</h3>
+                    <p class="feature-description">Each detail of your competition experience — from registration to
+                        awards — reflects our dedication to perfection. Our platform and events meet the highest global
+                        standards.</p>
+                </div>
+
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 5V20H35" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Global Reach, Personal Touch</h3>
+                    <p class="feature-description">With creators in over 80 countries, Createathon Studio brings the
+                        world closer to you. Our team manages every aspect of your experience, guaranteeing seamless
+                        competition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitions Showcase -->
+    <section class="showcase" id="competitions">
+        <canvas id="showcase-canvas" class="showcase-canvas"></canvas>
+        <div class="showcase-background"></div>
+        <div class="container">
+            <div class="showcase-content">
+                <h2 class="showcase-title">Compete at the Highest Level</h2>
+                <h3 class="showcase-subtitle">Where talent meets opportunity</h3>
+                <p class="showcase-description">Our flagship createathons feature cutting-edge challenges across design,
+                    development, content creation, and innovation. With prize pools exceeding $500K annually and
+                    partnerships with industry leaders, every competition is engineered for exceptional impact and
+                    career-defining moments.</p>
+
+                <div class="showcase-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Competitions Hosted</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">80+</div>
+                        <div class="stat-label">Countries Reached</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">$2M+</div>
+                        <div class="stat-label">Prizes Awarded</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A Better Way to Create</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card" data-animate>
+                    <div class="benefit-image">
+                        <div class="benefit-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <path
+                                    d="M30 10L35 25L50 27.5L40 37.5L42.5 52.5L30 45L17.5 52.5L20 37.5L10 27.5L25 25L30 10Z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="benefit-title">Industry Recognition</h3>
+                    <p class="benefit-description">Win recognition from top companies and build your portfolio with
+                        award-winning projects that open doors.</p>
+                </div>
+
+                <div class="benefit-card" data-animate>
+                    <div class="benefit-image">
+                        <div class="benefit-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2" />
+                                <path d="M30 15V30L42 36" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="benefit-title">24/7 Support</h3>
+                    <p class="benefit-description">Round-the-clock technical support, mentorship, and resources to help
+                        you succeed in every competition.</p>
+                </div>
+
+                <div class="benefit-card" data-animate>
+                    <div class="benefit-image">
+                        <div class="benefit-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <path d="M10 30H50M30 10V50" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <circle cx="30" cy="30" r="15" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="benefit-title">Premium Resources</h3>
+                    <p class="benefit-description">Access exclusive tools, APIs, cloud credits, and professional
+                        software to bring your ideas to life.</p>
+                </div>
+
+                <div class="benefit-card" data-animate>
+                    <div class="benefit-image">
+                        <div class="benefit-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <path d="M15 45L30 15L45 45M20 35H40" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="benefit-title">Skill Development</h3>
+                    <p class="benefit-description">Level up your skills through challenging projects, expert feedback,
+                        and collaborative learning experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Section -->
+    <section class="global" id="global">
+        <div class="global-background"></div>
+        <div class="container">
+            <div class="global-content">
+                <h2 class="global-title">Create Anywhere</h2>
+                <div class="global-stats-large">
+                    <div class="global-stat">
+                        <div class="global-stat-number">50K+</div>
+                        <div class="global-stat-label">Active Creators</div>
+                    </div>
+                    <div class="global-divider"></div>
+                    <div class="global-stat">
+                        <div class="global-stat-text">Compete with total freedom and support from anywhere in the world
+                        </div>
+                    </div>
+                </div>
+                <p class="global-description">Our global community spans every continent, bringing together the world's
+                    most talented creators. From Tokyo to Toronto, Mumbai to Miami — wherever you are, you're part of
+                    something bigger.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Ready to Compete?</h2>
+                <p class="contact-description">Join thousands of creators who are pushing boundaries and winning big.
+                    Your next breakthrough starts here.</p>
+                <div class="contact-buttons">
+                    <a href="#" class="btn btn-primary">Join a Competition</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:hello@createathon.studio" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M3 4H17C17.55 4 18 4.45 18 5V15C18 15.55 17.55 16 17 16H3C2.45 16 2 15.55 2 15V5C2 4.45 2.45 4 3 4Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M18 5L10 11L2 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        hello@createathon.studio
+                    </a>
+                    <a href="tel:+1234567890" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M18 14.5V17C18 17.55 17.55 18 17 18C8.72 18 2 11.28 2 3C2 2.45 2.45 2 3 2H5.5C6.05 2 6.5 2.45 6.5 3C6.5 4.25 6.7 5.45 7.07 6.57C7.18 6.92 7.1 7.31 6.82 7.59L5.62 8.79C6.88 11.62 9.38 14.12 12.21 15.38L13.41 14.18C13.69 13.9 14.08 13.82 14.43 13.93C15.55 14.3 16.75 14.5 18 14.5C18.55 14.5 19 14.95 19 15.5Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                        +1 (234) 567-890
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">CREATEATHON</span>
+                        <span class="logo-subtitle">STUDIO</span>
+                    </div>
+                    <p class="footer-tagline">Empowering creators through competition</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="#competitions">Competitions</a></li>
+                            <li><a href="#benefits">Benefits</a></li>
+                            <li><a href="#global">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Rules</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Createathon Studio. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M15.751 2h2.874l-6.278 7.173L19.5 18h-5.783l-4.527-5.92L3.925 18H1.05l6.714-7.672L1.5 2h5.932l4.093 5.41L15.751 2z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M4.5 3C3.67 3 3 3.67 3 4.5S3.67 6 4.5 6 6 5.33 6 4.5 5.33 3 4.5 3zM3 7.5h3V17H3V7.5zM8.5 7.5h2.88v1.3h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V17h-3v-4.7c0-1.12-.02-2.56-1.56-2.56-1.56 0-1.8 1.22-1.8 2.48V17h-3V7.5z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10 2c2.17 0 2.43.01 3.29.05.78.04 1.31.17 1.78.36.48.19.89.44 1.3.84.4.41.65.82.84 1.3.19.47.32 1 .36 1.78.04.86.05 1.12.05 3.29s-.01 2.43-.05 3.29c-.04.78-.17 1.31-.36 1.78-.19.48-.44.89-.84 1.3-.41.4-.82.65-1.3.84-.47.19-1 .32-1.78.36-.86.04-1.12.05-3.29.05s-2.43-.01-3.29-.05c-.78-.04-1.31-.17-1.78-.36-.48-.19-.89-.44-1.3-.84-.4-.41-.65-.82-.84-1.3-.19-.47-.32-1-.36-1.78C2.01 12.43 2 12.17 2 10s.01-2.43.05-3.29c.04-.78.17-1.31.36-1.78.19-.48.44-.89.84-1.3.41-.4.82-.65 1.3-.84.47-.19 1-.32 1.78-.36C7.57 2.01 7.83 2 10 2zm0 1.44c-2.14 0-2.39.01-3.23.05-.69.03-1.07.15-1.32.25-.33.13-.57.28-.82.53s-.4.49-.53.82c-.1.25-.22.63-.25 1.32-.04.84-.05 1.09-.05 3.23s.01 2.39.05 3.23c.03.69.15 1.07.25 1.32.13.33.28.57.53.82s.49.4.82.53c.25.1.63.22 1.32.25.84.04 1.09.05 3.23.05s2.39-.01 3.23-.05c.69-.03 1.07-.15 1.32-.25.33-.13.57-.28.82-.53s.4-.49.53-.82c.1-.25.22-.63.25-1.32.04-.84.05-1.09.05-3.23s-.01-2.39-.05-3.23c-.03-.69-.15-1.07-.25-1.32-.13-.33-.28-.57-.53-.82s-.49-.4-.82-.53c-.25-.1-.63-.22-1.32-.25-.84-.04-1.09-.05-3.23-.05z" />
+                            <circle cx="10" cy="10" r="3.2" />
+                            <circle cx="14.4" cy="5.6" r=".75" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="3d-scene.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
